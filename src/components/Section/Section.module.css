@@ -1,0 +1,12 @@
+.section{
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    background-color: antiquewhite;
+    
+}
+
+.title {
+    text-align: center;
+}
