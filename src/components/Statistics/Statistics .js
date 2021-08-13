@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './Statistics.module.css'
 
 
@@ -9,6 +10,7 @@ const Statistics = (props) => {
     //         <div>{countPositiveFeedbackPercentage()}%</div>
     //     </div>
     // )
+
     const listItems = Object.keys(props).map((name, index) =>{
         const obj = {};
         obj[name] = props[name];
@@ -27,12 +29,13 @@ const Statistics = (props) => {
     )
 }
 
-Statistics.defaultProps = {
-    positivePercentage: 0,
-} 
 
 Statistics.propTypes = {
-
+        good: PropTypes.number.isRequired,
+        neutral:  PropTypes.number.isRequired,
+        bad: PropTypes.number.isRequired,
+        total: PropTypes.number.isRequired,
+        positivePercentage: PropTypes.number.isRequired,
 }
 
 
