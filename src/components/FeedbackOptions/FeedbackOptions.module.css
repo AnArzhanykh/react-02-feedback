@@ -1,0 +1,10 @@
+.container {
+    text-align: center;
+
+}
+
+.button__size {
+    margin-right: 20px;
+    text-align: center;
+    font-size: 20px;
+}
