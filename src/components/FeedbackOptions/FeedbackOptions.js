@@ -12,7 +12,7 @@ const FeedbackOptions = ({options, onLeaveFeedback }) =>{
                                                 key={item} 
                                                 onClick={()=>onLeaveFeedback(item)}>
                                                     {item}
-                                        </button>)}
+                                </button>)}
         </div>
     )
 }

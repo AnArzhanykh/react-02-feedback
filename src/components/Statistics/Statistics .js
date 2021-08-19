@@ -3,20 +3,15 @@ import styles from './Statistics.module.css'
 
 
 const Statistics = (props) => {
-    // console.log(countPositiveFeedbackPercentage);
-    // return(
-    //     <div>
-    //         <div>{countTotalFeedback()} </div>
-    //         <div>{countPositiveFeedbackPercentage()}%</div>
-    //     </div>
-    // )
 
-    const listItems = Object.keys(props).map((name, index) =>{
-        const obj = {};
-        obj[name] = props[name];
+
+    const listItems = Object.keys(props).map((name) =>{
+        // const obj = {};
+        // console.log(name);
+        // obj[name] = props[name];
         return ('positivePercentage' === name) ?
-            <li key ={index} className={styles.item}> Positive feedback: {obj[name]}%</li>
-            : <li key ={index} className={styles.item}> {name}: {obj[name]}</li> 
+            <li key ={name} className={styles.item}> Positive feedback: {[name]}%</li>
+            : <li key ={name} className={styles.item}> {props[name]}: {[name]}</li> 
     });
 
     return(
