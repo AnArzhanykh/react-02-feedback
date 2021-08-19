@@ -10,7 +10,7 @@ const Statistics = (props) => {
         // console.log(name);
         // obj[name] = props[name];
         return ('positivePercentage' === name) ?
-            <li key ={name} className={styles.item}> Positive feedback: {[name]}%</li>
+            <li key ={name} className={styles.item}> Positive feedback: {props[name]}%</li>
             : <li key ={name} className={styles.item}> {props[name]}: {[name]}</li> 
     });
 
