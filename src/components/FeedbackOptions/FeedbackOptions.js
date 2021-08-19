@@ -2,17 +2,11 @@ import PropTypes from 'prop-types'
 import styles from './FeedbackOptions.module.css'
 
 const FeedbackOptions = ({options, onLeaveFeedback }) =>{
-    const arr = []
-    for(let key in options){
-        arr.push(key)
-    }
+
+    const item = Object.keys(options).map(item => <button className={styles.button__size} key={item} onClick={()=>onLeaveFeedback(item)}>{item}</button>)
     return(
         <div className={styles.container}>
-            {arr.map(item => <button className={styles.button__size} 
-                                                key={item} 
-                                                onClick={()=>onLeaveFeedback(item)}>
-                                                    {item}
-                                </button>)}
+            {item}
         </div>
     )
 }

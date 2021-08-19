@@ -6,9 +6,6 @@ const Statistics = (props) => {
 
 
     const listItems = Object.keys(props).map((name) =>{
-        // const obj = {};
-        // console.log(name);
-        // obj[name] = props[name];
         return ('positivePercentage' === name) ?
             <li key ={name} className={styles.item}> Positive feedback: {props[name]}%</li>
             : <li key ={name} className={styles.item}> {props[name]}: {[name]}</li> 
