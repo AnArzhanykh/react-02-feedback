@@ -31,25 +31,28 @@ class App extends Component {
   //   }))
   // }
 
-  onLeaveFeedback = (index) =>{
+  onLeaveFeedback = (item) =>{
+    console.log(item);
+    this.setState(prevState =>({
+          [item]: prevState[item] +1
+        }))
+    // if(0===index){
+    //   this.setState(prevState =>({
+    //     good: prevState.good +1
+    //   }))
+    // }
 
-    if(0===index){
-      this.setState(prevState =>({
-        good: prevState.good +1
-      }))
-    }
+    // if(1===index){
+    //   this.setState(prevState =>({
+    //     neutral: prevState.neutral +1
+    //   }))
+    // }
 
-    if(1===index){
-      this.setState(prevState =>({
-        neutral: prevState.neutral +1
-      }))
-    }
-
-    if(2===index){
-      this.setState(prevState =>({
-        bad: prevState.bad +1
-      }))
-    }
+    // if(2===index){
+    //   this.setState(prevState =>({
+    //     bad: prevState.bad +1
+    //   }))
+    // }
 
   }
 

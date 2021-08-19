@@ -8,9 +8,9 @@ const FeedbackOptions = ({options, onLeaveFeedback }) =>{
     }
     return(
         <div className={styles.container}>
-            {arr.map((item, index) => <button className={styles.button__size} 
-                                                key={index} 
-                                                onClick={()=>onLeaveFeedback(index)}>
+            {arr.map(item => <button className={styles.button__size} 
+                                                key={item} 
+                                                onClick={()=>onLeaveFeedback(item)}>
                                                     {item}
                                         </button>)}
         </div>
